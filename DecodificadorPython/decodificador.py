@@ -43,7 +43,7 @@ def instruccionesTipoR():
         with open(filename, 'r') as archivo:#funcion para leer el archivo
             lineas = archivo.readlines()
 
-        with open('intruciones r.txt', 'w') as instrucciones:#funcion para escribir y ordenar el codigo binario que va al txt
+        with open('intruciones_r.txt', 'w') as instrucciones:#funcion para escribir y ordenar el codigo binario que va al txt
             for linea in lineas:
                 asmInstructions = asmInstructions + linea
                 partes = linea.split()
