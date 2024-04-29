@@ -7,12 +7,12 @@ module _ALU(
 	output ZF
 );
 //2. Definir Elementos /Componentes Internos (Cables, Registros).
-wire AND;
-wire OR;
+wire [31:0]AND;
+wire [31:0]OR;
 wire [31:0] add;
 wire [31:0] substract;
 wire setOnLessThan;
-wire NOR;
+wire [31:0]NOR;
 
 
 //3. Elementos de Procesamiento (Lógicos y aritméticos)

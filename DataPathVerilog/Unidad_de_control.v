@@ -22,16 +22,16 @@ always @(*)
 		case (op)
 		6'b0000000:
 			begin
-				MemToReg=1'b1;
+				MemToReg=1'b0;
 				MemToWrite=1'b0;
 				ALUOp=3'b000;
 				RegWrite=1'b1;
 			end
 		default:
 			begin
-				MemToReg=1'b0;
+				MemToReg=1'b1;
 				MemToWrite=1'b0;
-				ALUOp=3'b000;
+				ALUOp=3'b001;
 				RegWrite=1'b0;
 			end
 		endcase
