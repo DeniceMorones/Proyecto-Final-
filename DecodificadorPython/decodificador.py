@@ -89,14 +89,14 @@ button_exit = Button(window,
 
 label_assembly_instructions = Label(instructions_frame,
                                     textvariable=assemblyInstructions,
-                                    width=50, height=6,
+                                    width=50, height=12,
                                     fg="blue",
                                     background="white",
                                     anchor='nw', justify='left')
 
 label_binary_instructions = Label(instructions_frame,
                                   textvariable=binaryInstructions,
-                                  width=50, height=6,
+                                  width=50, height=12,
                                   fg="blue",
                                   background="white",
                                   anchor='nw', justify='left')
