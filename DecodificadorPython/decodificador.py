@@ -13,7 +13,7 @@ assemblyInstructions.set("")
 
 def browseFiles():
     global filename
-    filename = filedialog.askopenfilename(initialdir = "/",
+    filename = filedialog.askopenfilename(initialdir = "./Proyecto-Final-/DecodificadorPython",
                                           title = "Select a File",
                                           filetypes = (("Assembly files",
                                                         "*.asm*"),
@@ -42,8 +42,11 @@ def instruccionesTipoR():
     try:
         with open(filename, 'r') as archivo:#funcion para leer el archivo
             lineas = archivo.readlines()
-
-        with open('intruciones_r.txt', 'w') as instrucciones:#funcion para escribir y ordenar el codigo binario que va al txt
+    except FileNotFoundError:
+        print("El archivo especificado no se encontró." + filename)#funcion en caso de no encontrar el archivo
+    
+    try:
+        with open('./Proyecto-Final-/DataPathVerilog/intruciones_r.txt', 'w') as instrucciones:#funcion para escribir y ordenar el codigo binario que va al txt
             for linea in lineas:
                 asmInstructions = asmInstructions + linea
                 partes = linea.split()
@@ -65,7 +68,7 @@ def instruccionesTipoR():
             print(binaryInstructions.get())
 
     except FileNotFoundError:
-        print("El archivo especificado no se encontró." + filename)#funcion en caso de no encontrar el archivo
+        print("El archivo especificado a escribir no se encontró.")#funcion en caso de no encontrar el archivo
 
 instructions_frame = Frame(window, background="white")
 
