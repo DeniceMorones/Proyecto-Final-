@@ -39,6 +39,10 @@ Las instrucciones de las líneas leídas se separan por partes, las instruccione
 
 ![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/165964044/309faf8d-63cf-4eca-b495-d6c21bbb9429)
 
+**Archivo de las instrucciones dentro de la carpeta de "Decodificador"**
+
+![Add a little bit of body text](https://github.com/DeniceMorones/Proyecto-Final-/assets/165964044/2f7e6d92-e814-432f-abab-44bfebb8e98b) 
+
 
 
 
