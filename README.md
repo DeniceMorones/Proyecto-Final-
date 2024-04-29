@@ -31,7 +31,9 @@ Comenzando con el DataPath basandonos en el siguiente diagrama:
 
 ![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/165964044/1fc0d74c-0fdf-48e3-bb35-d91b7660de6e)
 
-El decodificador es un programa hecho con Python utilizando la librería tkinter para crear un interfaz intuitivo para el usuario.
+## Decodificador 👨‍💻
+
+El decodificador es un programa hecho con Python&reg; utilizando la librería **tkinter** para crear un interfaz intuitivo para el usuario.
 En este programa podemos seleccionar cualquier archivo .asm de nuestro PC para posteriormente decodificar las instrucciones tipo R que este contenga. Esto se hace mediante la lectura de un archivo guardando su ruta, la lectura del archivo se hace por líneas, posteriormente crea un archivo de texto instrucciones_r.txt en modo escritura para que se le permita añadir datos.
 Las instrucciones de las líneas leídas se separan por partes, las instrucciones cambian a binario y el diccionario decodifica la función, se terminan de procesar todas las instrucciones y se almacenan en el archivo de tipo texto.
 
