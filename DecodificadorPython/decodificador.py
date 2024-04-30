@@ -13,7 +13,7 @@ assemblyInstructions.set("")
 
 def browseFiles():
     global filename
-    filename = filedialog.askopenfilename(initialdir = "/",
+    filename = filedialog.askopenfilename(initialdir = "./",
                                           title = "Select a File",
                                           filetypes = (("Assembly files",
                                                         "*.asm*"),
@@ -42,8 +42,11 @@ def instruccionesTipoR():
     try:
         with open(filename, 'r') as archivo:#funcion para leer el archivo
             lineas = archivo.readlines()
-
-        with open('intruciones r.txt', 'w') as instrucciones:#funcion para escribir y ordenar el codigo binario que va al txt
+    except FileNotFoundError:
+        print("El archivo especificado no se encontró." + filename)#funcion en caso de no encontrar el archivo
+    
+    try:
+        with open('../DataPathVerilog/instrucciones_r.txt', 'w') as instrucciones:#funcion para escribir y ordenar el codigo binario que va al txt
             for linea in lineas:
                 asmInstructions = asmInstructions + linea
                 partes = linea.split()
@@ -65,7 +68,7 @@ def instruccionesTipoR():
             print(binaryInstructions.get())
 
     except FileNotFoundError:
-        print("El archivo especificado no se encontró." + filename)#funcion en caso de no encontrar el archivo
+        print("El archivo especificado a escribir no se encontró.")#funcion en caso de no encontrar el archivo
 
 instructions_frame = Frame(window, background="white")
 
@@ -89,14 +92,14 @@ button_exit = Button(window,
 
 label_assembly_instructions = Label(instructions_frame,
                                     textvariable=assemblyInstructions,
-                                    width=50, height=6,
+                                    width=50, height=12,
                                     fg="blue",
                                     background="white",
                                     anchor='nw', justify='left')
 
 label_binary_instructions = Label(instructions_frame,
                                   textvariable=binaryInstructions,
-                                  width=50, height=6,
+                                  width=50, height=12,
                                   fg="blue",
                                   background="white",
                                   anchor='nw', justify='left')
