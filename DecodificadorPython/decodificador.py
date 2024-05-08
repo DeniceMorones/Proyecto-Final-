@@ -2,41 +2,33 @@ from tkinter import *
 from tkinter import messagebox
 from tkinter import filedialog
 
-
-def newFile():
-    print('new')
-
-
 def openFile():
-    global filename
-    filename = filedialog.askopenfilename(initialdir = "./",
-                                          title = "Select a File",
-                                          filetypes = (("Assembly files",
-                                                        "*.asm*"),
-                                                        ("Text files",
-                                                        "*.txt*"),
-                                                       ("all files",
-                                                        "*.*")))
+    global path
+    path = filedialog.askopenfilename(initialdir = "./",
+                                          title = "Selecciona un archivo",
+                                          filetypes = [("Archivos de ensamblador", "*.asm*"),
+                                                       ("Archivos de texto", "*.txt*"),
+                                                       ("Todos los archivos", "*.*")])
       
-    label_file_explorer.configure(text="Archivo elegido: " + filename)
+    label_file_explorer.configure(text="Archivo elegido: " + path)
 
-    if filename:
+    if path:
         try:
-            with open(filename, "r") as file:
+            with open(path, "r") as file:
                 editor.delete(1.0, END)
                 editor.insert(1.0, file.read())
         except Exception as e:
-            messagebox.showerror("Error", f"No se pudo abrir el archivo: {filename}")
+            messagebox.showerror("Error", f"No se pudo abrir el archivo: {path}")
     return None
 
 def saveFile():
     try:
-        if filename:
+        if path:
             try:
                 textContent = editor.get(1.0, END)
-                with open(filename, "w") as file:
+                with open(path, "w") as file:
                     file.write(textContent)
-                messagebox.showinfo("Guardado", f"El archivo se guardo correctamente en la direccion: {filename}")
+                messagebox.showinfo("Guardado", f"El archivo se guardo correctamente en la direccion: {path}")
             except Exception as e:
                 messagebox.showerror("Error", f"No se pudo guardar el archivo: {e}")
     except:
@@ -44,7 +36,18 @@ def saveFile():
     return None
 
 def saveFileAs():
-    print('saveAs')
+    global path
+    path = filedialog.asksaveasfilename(defaultextension=".txt",
+                                            filetypes=[("Archivos de texto", "*.txt*"),
+                                                       ("Archivos de ensamblador", "*.asm*"),
+                                                       ("Todos los archivos", "*.*")])
+    if path:
+        try:
+            contenido_texto = editor.get(1.0, END)
+            with open(path, "w") as archivo:
+                archivo.write(contenido_texto)
+        except Exception as e:
+            messagebox.showerror("Error", f"No se pudo guardar el archivo: {e}")
 
 def registro(reg):
     return f"{int(reg.replace('$', '')):05b}"#Convierte un registro en su representante numérico.
@@ -62,10 +65,10 @@ def instruccionesTipoR():
     opcode = '000000'  # opcode es siempre 000000 para instrucciones tipo R
 
     try:
-        with open(filename, 'r') as archivo: #funcion para leer el archivo
+        with open(path, 'r') as archivo: #funcion para leer el archivo
             lineas = archivo.readlines()
     except FileNotFoundError:
-        print("El archivo especificado no se encontró." + filename) #excepcion en caso de no encontrar el archivo
+        print("El archivo especificado no se encontró." + path) #excepcion en caso de no encontrar el archivo
     
     try:
         with open('../DataPathVerilog/instrucciones_r.txt', 'w') as instrucciones:#funcion para escribir y ordenar el codigo binario que va al txt
@@ -108,6 +111,7 @@ archivo_menu = Menu(menu_bar, tearoff=0)
 menu_bar.add_cascade(label="Archivo", menu=archivo_menu)
 archivo_menu.add_command(label="Abrir", command=openFile)
 archivo_menu.add_command(label="Guardar", command=saveFile)
+archivo_menu.add_command(label="Guardar como", command=saveFileAs)
 archivo_menu.add_separator()
 archivo_menu.add_command(label="Salir", command=window.quit)
 
