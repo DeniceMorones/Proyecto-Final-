@@ -116,7 +116,7 @@ archivo_menu.add_command(label="Abrir", command=openFile)
 archivo_menu.add_command(label="Guardar", command=saveFile)
 archivo_menu.add_command(label="Guardar como", command=saveFileAs)
 archivo_menu.add_separator()
-archivo_menu.add_command(label="Salir", command=window.quit)
+archivo_menu.add_command(label="Salir", command=exit) #command=window.quit
 
 label_file_explorer = Label(window,
                             text="Archivo elegido:",
@@ -133,13 +133,9 @@ button_R = Button(window,
                   command=instruccionesTipoR)
 button_R.grid(column=0, row=2, columnspan=3, sticky='ew')
 
-button_exit = Button(window,
-                     text="Salir",
-                     command=exit)
-button_exit.grid(column=0, row=3, columnspan=3, sticky='ew')
 
 instructions_frame = Frame(window, background="white")
-instructions_frame.grid(column=0, row=4, columnspan=3, sticky='ew')
+instructions_frame.grid(column=0, row=3, columnspan=3, sticky='ew')
 instructions_frame.grid_columnconfigure(0, weight=1)
 instructions_frame.grid_columnconfigure(1, weight=1)
 
