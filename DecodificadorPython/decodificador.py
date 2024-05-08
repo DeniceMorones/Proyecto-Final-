@@ -41,6 +41,9 @@ def saveFileAs():
                                             filetypes=[("Archivos de texto", "*.txt*"),
                                                        ("Archivos de ensamblador", "*.asm*"),
                                                        ("Todos los archivos", "*.*")])
+    
+    label_file_explorer.configure(text="Archivo elegido: " + path)
+
     if path:
         try:
             contenido_texto = editor.get(1.0, END)
@@ -93,7 +96,7 @@ def instruccionesTipoR():
             print(binaryInstructions.get())
 
     except FileNotFoundError:
-        print("El archivo especificado a escribir no se encontró.")#funcion en caso de no encontrar el archivo
+        print("El archivo especificado a escribir no se encontró.") #excepcion en caso de no encontrar el archivo
 
 window = Tk()
 window.title('Decodificador')
