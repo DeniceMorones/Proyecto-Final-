@@ -52,48 +52,60 @@ def saveFileAs():
         except Exception as e:
             messagebox.showerror("Error", f"No se pudo guardar el archivo: {e}")
 
-def registro(reg):
+def toBinary(reg):
     return f"{int(reg.replace('$', '')):05b}"#Convierte un registro en su representante numérico.
 
 def instruccionesTipoR():
     biInstructions = ""
+    biInstructionsDivided = ""
     asmInstructions = ""
+    shamt = ""
     funct = {
         'add': '100000',
         'sub': '100010',
+        'mul': '000010',
+        'div': '011010',
         'and': '100100',
         'or': '100101',
         'slt': '101010',
+        'nop': '000000'
     } #diccionario de las funciones 
     opcode = '000000'  # opcode es siempre 000000 para instrucciones tipo R
 
     try:
         with open(path, 'r') as archivo: #funcion para leer el archivo
-            lineas = archivo.readlines()
+            lines = archivo.readlines()
     except FileNotFoundError:
         print("El archivo especificado no se encontró." + path) #excepcion en caso de no encontrar el archivo
     
     try:
         with open('../DataPathVerilog/instrucciones_r.txt', 'w') as instrucciones:#funcion para escribir y ordenar el codigo binario que va al txt
-            for linea in lineas:
-                asmInstructions = asmInstructions + linea
-                partes = linea.split()
-                if len(partes) != 4:
+            for line in lines:
+                asmInstructions = asmInstructions + line
+                parts = line.split()
+                if len(parts) != 4:
+                    if len(parts) == 1:
+                        if(parts[0] == 'nop'):
+                            biInstructions = biInstructions + '00000000000000000000000000000000' + '\n'
                     continue
-                instruccion, rd, rs, rt = partes
+                instruccion, rd, rs, rt = parts
                 if instruccion in funct:
-                    rs = registro(rs)
-                    rt = registro(rt)
-                    rd = registro(rd)
-                    shamt = '00000'
+                    rs = toBinary(rs)
+                    rt = toBinary(rt)
+                    rd = toBinary(rd)
+                    if(instruccion == 'div'):
+                        shamt = '00010'
+                    else:
+                        shamt = '00000'
                     funcion = funct[instruccion]
-                    instruccion_binaria = f"{opcode}{rs}{rt}{rd}{shamt}{funcion}"
-                    biInstructions = biInstructions + instruccion_binaria + '\n'
-            instrucciones.write(biInstructions)
+                    binaryInstruction = f"{opcode}{rs}{rt}{rd}{shamt}{funcion}"
+                    splitInstructions = [binaryInstruction[i:i+8] for i in range(0, len(binaryInstruction), 8)]
+                    biInstructions = biInstructions + binaryInstruction + '\n'
+                    for str in splitInstructions:
+                        biInstructionsDivided = biInstructionsDivided + str + '\n'
+            instrucciones.write(biInstructionsDivided)
             assemblyInstructions.set(asmInstructions)
             binaryInstructions.set(biInstructions)
-            print(assemblyInstructions.get())
-            print(binaryInstructions.get())
 
     except FileNotFoundError:
         print("El archivo especificado a escribir no se encontró.") #excepcion en caso de no encontrar el archivo
@@ -141,7 +153,7 @@ instructions_frame.grid_columnconfigure(1, weight=1)
 
 label_assembly_instructions = Label(instructions_frame,
                                     textvariable=assemblyInstructions,
-                                    width=50, height=12,
+                                    width=50, height=15,
                                     fg="blue",
                                     background="white",
                                     anchor='nw', justify='left')
@@ -149,7 +161,7 @@ label_assembly_instructions.grid(column=0, row=0, sticky='nw', padx=(200, 0), pa
 
 label_binary_instructions = Label(instructions_frame,
                                   textvariable=binaryInstructions,
-                                  width=50, height=12,
+                                  width=55, height=15,
                                   fg="blue",
                                   background="white",
                                   anchor='nw', justify='left')
