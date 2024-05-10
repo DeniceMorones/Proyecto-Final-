@@ -1,4 +1,3 @@
-
 module multiplexor (
     input wire ZF,              
     input wire [31:0] cero,    
