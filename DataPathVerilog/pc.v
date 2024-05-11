@@ -1,14 +1,25 @@
-module PC(
-    input wire ZF,
-    output reg [7:0] sel 
+module PC (
+    input wire clk,           // para el reloj
+    input wire reset,         // un reset
+    output reg [7:0] direccion  // Dirección de la memoria de instrucciones
 );
 
-    
-    // señales que va recibir del multiplexor
-    wire [7:0] cero_value;
-    wire [7:0] uno_value;
+    // contador para la dirección de la instrucción
+    reg [7:0] contador;
 
-    // Multiplexor para seleccionar entre cero y uno
-    multiplexor mux(.ZF(ZF), .cero(cero_value), .uno(uno_value), .salida(sel));
+    // actualizar la dirección
+    always @(clk, reset) begin
+        if (reset) begin
+            contador <= 8'd0;  // restablecer el contador a cero en caso de reset
+        end else begin
+            if (clk) begin
+                contador <= contador + 1;  // incrementar el contador en cada ciclo de reloj
+            end
+        end
+    end
+
+    // la dirección de la instrucción es la salida del contador
+    assign direccion = contador;
 
 endmodule
+

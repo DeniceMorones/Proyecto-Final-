@@ -1,4 +1,4 @@
-module Mux_0_1 (
+/*module Mux_0_1 (
     input wire selector,    // este selecciona las entradas
     input wire input_0,     // entrada 0
     input wire input_1,     // entrada 1
@@ -14,4 +14,4 @@ module Mux_0_1 (
         end
     end
 
-endmodule
+endmodule*/

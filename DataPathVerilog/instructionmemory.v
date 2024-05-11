@@ -3,27 +3,20 @@ module InstructionMemory (
     output reg [31:0] instruccion
 );
 
-    
-    PC p1(.ZF(ZF), .sel(sel));
-
-    // contiene 256 direcciones
+    // Contiene 256 direcciones
     reg [7:0] memory [0:255];
 
- 
-    reg sel;
-
-	//lectura de las instrucciones
+    // lectura de las instrucciones
     initial begin
         $readmemb("instrucciones_r.txt", memory);
     end
 
-	//escribir o leer dependiendo del valor de sel
+    // lee la instruccion segun la direccion
     always @(*) begin
-        if (sel) begin
-            memory[direccion] = instruccion;
-        end else begin
-            instruccion = memory[direccion];
-        end
+        instruccion[31:24] = memory[direccion];	
+	instruccion[23:16] = memory[direccion+0'd1];
+	instruccion[15:8] = memory[direccion+0'd2];
+	instruccion[7:0] = memory[direccion+0'd3];
     end
 
 endmodule
