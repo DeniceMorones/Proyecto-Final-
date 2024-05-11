@@ -87,6 +87,7 @@ def instruccionesTipoR():
                     if len(parts) == 1:
                         if(parts[0] == 'nop'):
                             biInstructions = biInstructions + '00000000000000000000000000000000' + '\n'
+                            for i in range(4): biInstructionsDivided = biInstructionsDivided + '00000000' + '\n'
                     continue
                 instruccion, rd, rs, rt = parts
                 if instruccion in funct:
@@ -99,9 +100,10 @@ def instruccionesTipoR():
                         shamt = '00000'
                     funcion = funct[instruccion]
                     binaryInstruction = f"{opcode}{rs}{rt}{rd}{shamt}{funcion}"
-                    splitInstructions = [binaryInstruction[i:i+8] for i in range(0, len(binaryInstruction), 8)]
+                    splitInstruction = [binaryInstruction[i:i+8] for i in range(0, len(binaryInstruction), 8)]
+                    print(splitInstruction)
                     biInstructions = biInstructions + binaryInstruction + '\n'
-                    for str in splitInstructions:
+                    for str in splitInstruction:
                         biInstructionsDivided = biInstructionsDivided + str + '\n'
             instrucciones.write(biInstructionsDivided)
             assemblyInstructions.set(asmInstructions)
