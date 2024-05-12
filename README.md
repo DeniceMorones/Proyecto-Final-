@@ -43,6 +43,14 @@ Las instrucciones de las líneas leídas se separan por partes, las instruccione
 
 ![Add a little bit of body text](https://github.com/DeniceMorones/Proyecto-Final-/assets/165964044/2f7e6d92-e814-432f-abab-44bfebb8e98b) 
 
+# Fase 1.2
+
+Procesador single datapath el cual utiliza un solo camino para la transferencia de datos dentro del procesador, en otras palabras que consta de una ruta única.
+
+## decodificador 👨‍💻
+
+mejoramos el decodificador para lograr la edicion de las intrucciones asi como una busqueda en los archivos de nuestro computador 
+
 
 
 
