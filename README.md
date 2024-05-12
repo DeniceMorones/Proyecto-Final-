@@ -47,10 +47,16 @@ Las instrucciones de las líneas leídas se separan por partes, las instruccione
 
 Procesador single datapath el cual utiliza un solo camino para la transferencia de datos dentro del procesador, en otras palabras que consta de una ruta única.
 
-## decodificador 👨‍💻
+## Decodificador 👨‍💻
 
-mejoramos el decodificador para lograr la edicion de las intrucciones asi como una busqueda en los archivos de nuestro computador 
+Mejoramos el decodificador para lograr la edicion de las intrucciones asi como una busqueda en los archivos de nuestro computador ademas de las nuevas opciones guardar y guardar como. 
 
+![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/167491829/104172dd-b7c0-4cec-b830-e924eaf2506a)
 
+## instrucciones 
+
+Las instruciones ahora enviadas al archivo .txt ahora se muestran dividfidas en 8 bits por lo que cada 4 lienas tiene una intruccion.
+
+![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/167491829/2043bd28-364e-4ca6-ab61-c5fde7694d92)
 
 
