@@ -16,8 +16,7 @@ La longitud de sus instrucciones son de 32 bits, y su largo de palabra siempre s
 **Características de los Tipos de instrucciones (R, I, J):**
 
 -  R-Type: Son instrucciones que involucran tres registros y se utilizan para operaciones aritméticas y lógicas. Tienen un formato de 6 campos.
-
-- I-Type: Estas instrucciones usan dos registros y un valorinmediato. Se utilizan principalmente para operaciones de transferencia de datos y comparación. Tienen un formato de 4 campos.
+- I-Type: Estas instrucciones usan dos registros y un valor inmediato. Se utilizan principalmente para operaciones de transferencia de datos y comparación. Tienen un formato de 4 campos.
 - J-Type: Son instrucciones de salto incondicional. Utilizan una dirección de destino y tienen un formato de 2 campos.
 
 ![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/165964044/e80b69c9-a505-46d6-b221-64c1e6c2921b)
@@ -45,7 +44,9 @@ Las instrucciones de las líneas leídas se separan por partes, las instruccione
 
 # Fase 1.2
 
-Procesador single datapath el cual utiliza un solo camino para la transferencia de datos dentro del procesador, en otras palabras que consta de una ruta única.
+Procesador single datapath de MIPS para la ejecucionde intrucciones tipo R, el cual utiliza un solo camino para la transferencia de datos dentro del procesador, en otras palabras que consta de una ruta única.
+
+![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/167491829/187fac50-a40b-41fe-a526-10fe7c022864)
 
 ## Decodificador 👨‍💻
 
