@@ -55,7 +55,7 @@ Mejoramos el decodificador para lograr la edicion de las intrucciones asi como u
 
 ## instrucciones 
 
-Las instruciones ahora enviadas al archivo .txt ahora se muestran dividfidas en 8 bits por lo que cada 4 lienas tiene una intruccion.
+Las instruciones enviadas al archivo .txt ahora se muestran divididas en 8 bits por lo que cada 4 lineas tiene una intruccion.
 
 ![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/167491829/2043bd28-364e-4ca6-ab61-c5fde7694d92)
 
