@@ -11,8 +11,8 @@ module Mux2_1_32(
 always @ (*)
 	begin 
 		if(sel)
-			outOp=Op1;
-		else
 			outOp=Op2;
+		else
+			outOp=Op1;
 	end
 endmodule
