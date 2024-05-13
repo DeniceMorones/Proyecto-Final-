@@ -1,6 +1,6 @@
 // 1. Declarar el modulo y sus I/O
 module ALU_Control(
-	input [0:5] Func,
+	input [5:0] Func,
 	input [2:0] InOp,
 	output reg [3:0]outOp
 );

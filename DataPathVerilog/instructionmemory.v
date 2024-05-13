@@ -13,10 +13,10 @@ module InstructionMemory (
 
     // lee la instruccion segun la direccion
     always @(*) begin
-        instruccion[31:24] = memory[direccion];	
-	instruccion[23:16] = memory[direccion+0'd1];
-	instruccion[15:8] = memory[direccion+0'd2];
-	instruccion[7:0] = memory[direccion+0'd3];
+    instruccion[31:24] = memory[direccion];	
+	instruccion[23:16] = memory[direccion+8'd1];
+	instruccion[15:8] = memory[direccion+8'd2];
+	instruccion[7:0] = memory[direccion+8'd3];
     end
 
 endmodule

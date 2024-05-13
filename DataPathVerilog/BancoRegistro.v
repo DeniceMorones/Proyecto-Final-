@@ -1,8 +1,8 @@
-// 1. Declarar el modulo y sus I/O
+ // 1. Declarar el modulo y sus I/O
 module BancoDeRegistro(
 	input [4:0] RA1,
 	input [4:0] RA2,
-	input [31:0]Di,
+	input [31:0] Di,
 	input [4:0] Dir,
 	input RegWrite,
 	output reg [31:0] DR1,
