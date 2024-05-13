@@ -11,8 +11,6 @@ module InstructionMemory (
         $readmemb("instrucciones_r.txt", memory);
     end
 
-	assign direccion=direccion*4;
-
     // lee la instruccion segun la direccion
     always @(*) begin
         instruccion[31:24] = memory[direccion];	
