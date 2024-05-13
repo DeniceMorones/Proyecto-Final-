@@ -1,8 +1,8 @@
 module PC (
     input wire clk,           // para el reloj
-    input wire [7:0] addressIn;
+    input wire [7:0] dirIn;
     input wire reset,         // un reset
-    output reg [7:0] addresOut;  // Direccion de la memoria de instrucciones
+    output reg [7:0] dirOut;  // Direccion de la memoria de instrucciones
 );
 
     // contador para la direccion de la instruccion
@@ -14,7 +14,7 @@ module PC (
             contador <= 8'd0;  // restablecer el contador a cero en caso de reset
         end else begin
             if (clk) begin
-                addresOut <= addressIn;
+                dirOut <= dirIn;
             end
         end
     end

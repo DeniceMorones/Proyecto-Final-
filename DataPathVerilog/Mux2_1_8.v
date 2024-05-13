@@ -1,6 +1,6 @@
 // 1. Declarar el modulo y sus I/O
 module Mux2_1_8(
-	input  MemToReg,
+	input  sel,
 	input [7:0] Op1,
 	input [7:0] Op2,
 	output reg [7:0]outOp
@@ -10,7 +10,7 @@ module Mux2_1_8(
 //3. Elementos de Procesamiento (Lógicos y aritméticos)
 always @ (*)
 	begin 
-		if(MemToReg)
+		if(sel)
 			outOp=Op1;
 		else
 			outOp=Op2;
