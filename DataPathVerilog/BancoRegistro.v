@@ -2,8 +2,8 @@
 module BancoDeRegistro(
 	input [4:0] RA1,
 	input [4:0] RA2,
-	input [31:0] Di,
 	input [4:0] Dir,
+	input [31:0] Di,
 	input RegWrite,
 	output reg [31:0] DR1,
 	output reg [31:0] DR2 	
