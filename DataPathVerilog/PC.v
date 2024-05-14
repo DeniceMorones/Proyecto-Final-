@@ -1,8 +1,8 @@
 module PC (
     input wire clk,           // para el reloj
-    input wire [7:0] dirIn;
+    input wire [7:0] dirIn,
     input wire reset,         // un reset
-    output reg [7:0] dirOut;  // Direccion de la memoria de instrucciones
+    output reg [7:0] dirOut  // Direccion de la memoria de instrucciones
 );
 
     // contador para la direccion de la instruccion

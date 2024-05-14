@@ -14,7 +14,7 @@ wire MemWrite;
 wire ALUSrc;
 wire RegWrite;
 
-wire Instruction;
+wire [31:0] Instruction;
 wire [3:0] outOp;
 wire ZF;
 
@@ -37,7 +37,7 @@ Mux2_1_8 mux1 (.sel(Branch), .Op1(C3), .Op2(), .outOp(C1));
 
 InstructionMemory inst_memory(.direccion(C2), .instruccion(Instruction));
 
-ControlUnit UDC(.op(Instruction[31:26]), .RegDst(RegDst), Jump(Jump), .Branch(Branch), .MemRead(MemRead), .MemToReg(MemToReg), .ALUOp(ALUOp), 
+ControlUnit UDC(.op(Instruction[31:26]), .RegDst(RegDst), .Jump(Jump), .Branch(Branch), .MemRead(MemRead), .MemToReg(MemToReg), .ALUOp(ALUOp), 
 .MemWrite(MemWrite), .ALUSrc(AluSrc), .RegWrite(RegWrite));
 
 Mux2_1_5 mux2 (.sel(RegDst), .Op1(Instruction[20:16]), .Op2(Instruction[15:11]), .outOp(C4));
@@ -61,10 +61,6 @@ initial begin
 		clk = 1'b0;
 		forever #100
 		clk = ~clk;
-end
-
-initial begin
-		c1 = 8'd0;
 end
 
 endmodule

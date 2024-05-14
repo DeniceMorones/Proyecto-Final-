@@ -1,6 +1,6 @@
 module Mux2_1_5(
 	input [15:0] in,
-	output [31:0] out
+	output reg [31:0] out
 );
 
 always @ (*)

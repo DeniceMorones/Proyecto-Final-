@@ -14,7 +14,7 @@ module ControlUnit(
 always @(*)
 	begin
 		case (op)
-		6'b0000000: // Instrucciones tipo R
+		6'b0: // Instrucciones tipo R
 			begin
 				RegDst = 1'b1;
 				Jump = 1'b0;
