@@ -1,10 +1,11 @@
 `timescale 1ns/1ns
-// 1. Declarar el modulo y sus I/O
+
 module DataPath();
-//2. Definir Elementos /Componentes Internos (Cables, Registros).
+
 reg clk;
 
 wire RegDst;
+wire Jump;
 wire Branch;
 wire MemRead;
 wire MemToReg;
@@ -36,8 +37,8 @@ Mux2_1_8 mux1 (.sel(Branch), .Op1(C3), .Op2(), .outOp(C1));
 
 InstructionMemory inst_memory(.direccion(C2), .instruccion(Instruction));
 
-ControlUnit UDC(.op(Instruction[31:26]), .RegDst(RegDst), .Branch(Branch), .MemRead(MemRead), .MemToReg(MemToReg), .ALUOp(ALUOp), .MemWrite(MemWrite), 
-.ALUSrc(AluSrc), .RegWrite(RegWrite));
+ControlUnit UDC(.op(Instruction[31:26]), .RegDst(RegDst), Jump(Jump), .Branch(Branch), .MemRead(MemRead), .MemToReg(MemToReg), .ALUOp(ALUOp), 
+.MemWrite(MemWrite), .ALUSrc(AluSrc), .RegWrite(RegWrite));
 
 Mux2_1_5 mux2 (.sel(RegDst), .Op1(Instruction[20:16]), .Op2(Instruction[15:11]), .outOp(C4));
 
