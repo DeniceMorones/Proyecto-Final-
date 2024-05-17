@@ -3,8 +3,6 @@ module ShiftLeft2(
 	output reg [7:0] out
 );
 
-always @ (*)
-	begin 
-		out = {in, 2'b00};
-	end
+assign out = in << 2;
+
 endmodule
