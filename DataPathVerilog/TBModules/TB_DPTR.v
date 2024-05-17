@@ -1,17 +1,16 @@
 `timescale 1ns/1ns
-module TB_DPTR();
-reg [31:0] TB_InstruccionTR;
-wire TB_TR_ZF;
 
-DataPathT_R DPTR1(.InstruccionTR(TB_InstruccionTR),.TR_ZF(TB_TR_ZF));
+module TB_DataPath();
+
+DataPath DUV();
 integer file;
 integer i;
 
 initial
 	begin
-		$readmemb("DataTB.txt", DPTR1.BR1.MEM);
+		$readmemb("DataTB.txt", DUV.RB.MEM);
 		#100;
-        file = $fopen("instrucciones_r.txt", "r");
+        file = $fopen("instructions.txt", "r");
         if (file != 0) begin
             i = 0;
             while (!$feof(file)) begin
