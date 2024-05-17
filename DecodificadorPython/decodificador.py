@@ -53,7 +53,7 @@ def saveFileAs():
             messagebox.showerror("Error", f"No se pudo guardar el archivo: {e}")
 
 def toBinary(reg):
-    return f"{int(reg.replace('$', '')):05b}"#Convierte un registro en su representante numérico.
+    return f"{int(reg.replace('$', '')):05b}"#Convierte un registro en su representante binario.
 
 def instruccionesTipoR():
     biInstructions = ""
@@ -63,12 +63,18 @@ def instruccionesTipoR():
     funct = {
         'add': '100000',
         'sub': '100010',
-        'mul': '000010',
-        'div': '011010',
         'and': '100100',
         'or': '100101',
         'slt': '101010',
-        'nop': '000000'
+        'nop': '000000',
+        'addi': '001000',
+        'ori': '001101',
+        'andi': '001100',
+        'slti': '001010',
+        'lw': '100011',
+        'sw': '101011',
+        'beq': '000100',
+        'j': '000010'
     } #diccionario de las funciones 
     opcode = '000000'  # opcode es siempre 000000 para instrucciones tipo R
 
@@ -143,7 +149,7 @@ editor = Text(window, wrap=WORD)
 editor.grid(column=0, row=1, sticky="nsew", padx=10, pady=10)
 
 button_R = Button(window,
-                  text="Generar instrucciones tipo R",
+                  text="Traducir instrucciones a MIPS",
                   command=instruccionesTipoR)
 button_R.grid(column=0, row=2, columnspan=3, sticky='ew')
 
