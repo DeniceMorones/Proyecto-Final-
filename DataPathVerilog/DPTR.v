@@ -15,7 +15,7 @@ module DataPath();
     wire RegWrite;
 
     wire [31:0] Instruction;
-    wire [3:0] outOp;
+    wire [3:0] ALUSel;
     wire ZF;
 
     wire [31:0] PC_out;
@@ -80,7 +80,7 @@ module DataPath();
     );
 
     ControlUnit UDC(
-        .op(Instruction[31:26]),
+        .opcode(Instruction[31:26]),
         .RegDst(RegDst),
         .Jump(Jump),
         .Branch(Branch),
@@ -126,16 +126,16 @@ module DataPath();
         .outOp(ALU_operand2)
     );
 
-    ALU_Control AluC(
-        .Func(Instruction[5:0]),
-        .InOp(ALUOp),
-        .outOp(outOp)
+    ALU_Control AluCtrl(
+        .funct(Instruction[5:0]),
+        .ALUOp(ALUOp),
+        .ALUSel(ALUSel)
     );
 
     ALU Alu(
         .operador1(Read_data1),
         .operador2(ALU_operand2),
-        .selector(outOp),
+        .selector(ALUSel),
         .resultado(ALU_result),
         .ZF(ZF)
     );
