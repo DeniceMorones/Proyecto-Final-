@@ -1,4 +1,4 @@
-module Mux2_1_5(
+module SignExtend(
 	input [15:0] in,
 	output reg [31:0] out
 );
