@@ -3,7 +3,6 @@
 module DataPath();
 
     reg clk;
-    reg reset;
 
     wire RegDst;
     wire Jump;
@@ -31,12 +30,13 @@ module DataPath();
     wire [31:0] Read_data2;
     wire [31:0] ALU_operand2;
     wire [27:0] shiftedAddress;
-				wire [31:0] shiftedOffset;
-				wire [31:0] ExtendedOffset;
+	wire [31:0] shiftedOffset;
+	wire [31:0] ExtendedOffset;
+    wire [4:0] Mux2_Out;
+    wire [31:0] Mux4_Out;
 
     PC counter(
         .clk(clk),
-        .reset(reset),
         .dirIn(PC_next),
         .dirOut(PC_out)
     );
@@ -47,27 +47,36 @@ module DataPath();
         .resultado(PC_plus4)
     );
 
-				ADD add_branch (
+    ShiftLeft2_26_28 shiftLeft1(
+        .in(Instruction[25:0]),
+        .out(shiftedAddress)
+    );
+
+    assign Jump_address = {PC_plus4[31:28], shiftedAddress};
+
+    ADD add_branch (
         .operando1(PC_plus4),
         .operando2(shiftedOffset),
         .resultado(Branch_address)
     );
 
-    Mux2_1_32 mux1 (
+    Mux2_1_32 mux4 (
         .sel(Branch & ZF),
         .Op1(PC_plus4),
         .Op2(Branch_address),
+        .outOp(Mux4_Out)
+    );
+
+    Mux2_1_32 mux5 (
+        .sel(Jump),
+        .Op1(Mux4_Out),
+        .Op2(Jump_address),
         .outOp(PC_next)
     );
 
     InstructionMemory inst_memory(
         .direccion(PC_out),
         .instruccion(Instruction)
-    );
-
-    ShiftLeft2_26_28 shiftLeft1(
-        .in(Instruction[25:0]),
-        .out(shiftedAddress)
     );
 
     ControlUnit UDC(
@@ -87,25 +96,30 @@ module DataPath();
         .sel(RegDst),
         .Op1(Instruction[20:16]),
         .Op2(Instruction[15:11]),
-        .outOp(C4)
+        .outOp(Mux2_Out)
     );
 
     BancoDeRegistro BR1(
         .RA1(Instruction[25:21]),
         .RA2(Instruction[20:16]),
-        .Dir(C4),
+        .Dir(Mux2_Out),
         .Di(Write_data),
         .RegWrite(RegWrite),
         .DR1(Read_data1),
         .DR2(Read_data2)
     );
 
-				SignExtend signExtend(
-								.in(Instruction[15:0]), 
-								.out(ExtendedOffset)
-				)
+    SignExtend signExtend(
+		.in(Instruction[15:0]), 
+		.out(ExtendedOffset)
+	);
 
-    Mux2_1_32 mux3 (
+    ShiftLeft2_32 shiftLeft2(
+        .in(ExtendedOffset),
+        .out(shiftedOffset)
+    );
+
+    Mux2_1_32 mux3(
         .sel(ALUSrc),
         .Op1(Read_data2),
         .Op2(ExtendedOffset),
@@ -118,7 +132,7 @@ module DataPath();
         .outOp(outOp)
     );
 
-    ALU Alu1(
+    ALU Alu(
         .operador1(Read_data1),
         .operador2(ALU_operand2),
         .selector(outOp),
@@ -133,21 +147,15 @@ module DataPath();
         .Dout(Mem_data)
     );
 
-    Mux2_1_32 mux4 (
+    Mux2_1_32 mux1(
         .sel(MemToReg),
         .Op1(ALU_result),
         .Op2(Mem_data),
         .outOp(Write_data)
     );
 
-    
-
-    assign Jump_address = {PC_out[31:28], shiftedAddress};
-
     initial begin
         clk = 1'b0;
-        reset = 1'b1;
-        #50 reset = 1'b0;
         forever #100 clk = ~clk;
     end
 
