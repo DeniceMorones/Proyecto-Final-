@@ -85,7 +85,7 @@ def instruccionesTipoR():
         print("El archivo especificado no se encontró." + path) #excepcion en caso de no encontrar el archivo
     
     try:
-        with open('../DataPathVerilog/instrucciones_r.txt', 'w') as instrucciones:#funcion para escribir y ordenar el codigo binario que va al txt
+        with open('../DataPathVerilog/instructions.txt', 'w') as instrucciones:#funcion para escribir y ordenar el codigo binario que va al txt
             for line in lines:
                 asmInstructions = asmInstructions + line
                 parts = line.split()
