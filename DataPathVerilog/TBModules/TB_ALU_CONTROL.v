@@ -1,34 +1,42 @@
 `timescale 1ns/1ns
-module TB_ALU_Control();
-reg [0:5]TB_Func;
-reg [2:0]TB_InOp;
-wire [3:0]TB_outOP;
 
-ALU_Control ALU_C1(.Func(TB_Func),.InOp(TB_InOp),.outOp(TB_outOP));
+module TB_ALUControl();
+	reg [5:0] funct;
+	reg [2:0] ALUOp;
+	wire [3:0] ALUSel;
 
-initial
-	begin
-		TB_Func=6'b100000;
-		TB_InOp=3'b000;
+	ALUControl DUT(.funct(funct), .ALUOp(ALUOp), .ALUSel(ALUSel));
+
+	initial begin
+		ALUOp=3'b000;
 		#100;
-		TB_Func=6'b100000;
-		TB_InOp=3'b001;
+		ALUOp=3'b001;
 		#100;
-		TB_Func=6'b100010;
-		TB_InOp=3'b000;
+		ALUOp=3'b011;
 		#100;
-		TB_Func=6'b100100;
-		TB_InOp=3'b000;
+		ALUOp=3'b110;
 		#100;
-		TB_Func=6'b100101;
-		TB_InOp=3'b000;
+		ALUOp=3'b111;
 		#100;
-		TB_Func=6'b101010;
-		TB_InOp=3'b000;
+		funct=6'b100000;
+		ALUOp=3'b010;
 		#100;
-		TB_Func=6'b111011;
-		TB_InOp=3'b000;
+		funct=6'b100010;
+		ALUOp=3'b010;
+		#100;
+		funct=6'b100101;
+		ALUOp=3'b010;
+		#100;
+		funct=6'b100100;
+		ALUOp=3'b010;
+		#100;
+		funct=6'b101010;
+		ALUOp=3'b010;
+		#100;
+		funct=6'b000000;
+		ALUOp=3'b010;
 		#100;
 		
+		$stop;
 	end
 endmodule

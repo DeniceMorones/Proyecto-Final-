@@ -1,25 +1,30 @@
 `timescale 1ns / 1ns 
-module InstructionMemory_TB();
 
-    //cables y registros para las señales de entrada y salida
-    reg [7:0] direccion;          //entrada para la dirección de la memoria
-    wire [31:0] instruccion;       //salida para la instrucción leída
-
+module TB_InstructionMem();
+ reg [7:0] address;
+ wire [31:0] instruction; 
    
-InstructionMemory DUV(.direccion(direccion),.instruccion(instruccion));
+ InstructionMem DUT(.address(address), .instruction(instruction));
 
-    
-    initial begin
-        //valores iniciales a la dirección de la memoria
-        direccion = 8'h00;
-        #100;
+ initial begin
+  $readmemb("instructions.txt", DUT.memory);
+ end
 
-        // cambiar la dirección de la memoria
-        direccion = 8'h01; 
-        #100;
+ initial begin
+  address = 8'd0;
+  #100;
+  address = 8'd1; 
+  #100;
+  address = 8'd2; 
+  #100;
+  address = 8'd3;
+  #100;
+  address = 8'd4; 
+  #100;
+  address = 8'd5; 
+  #100;
 
-        $stop;
-    end
+  $stop;
+ end
 
 endmodule
-

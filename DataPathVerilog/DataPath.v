@@ -1,7 +1,6 @@
 `timescale 1ns/1ns
 
 module DataPath();
-
     reg clk;
 
     wire RegDst;
@@ -42,9 +41,9 @@ module DataPath();
     );
 
     ADD add4(
-        .operando1(PC_out),
-        .operando2(32'd4),
-        .resultado(PC_plus4)
+        .op1(PC_out),
+        .op2(32'd4),
+        .res(PC_plus4)
     );
 
     ShiftLeft2_26_28 shiftLeft1(
@@ -55,9 +54,9 @@ module DataPath();
     assign Jump_address = {PC_plus4[31:28], shiftedAddress};
 
     ADD add_branch (
-        .operando1(PC_plus4),
-        .operando2(shiftedOffset),
-        .resultado(Branch_address)
+        .op1(PC_plus4),
+        .op2(shiftedOffset),
+        .res(Branch_address)
     );
 
     Mux2_1_32 mux4 (
@@ -126,17 +125,17 @@ module DataPath();
         .outOp(ALU_operand2)
     );
 
-    ALU_Control AluCtrl(
+    ALUControl AluCtrl(
         .funct(Instruction[5:0]),
         .ALUOp(ALUOp),
         .ALUSel(ALUSel)
     );
 
     ALU Alu(
-        .operador1(Read_data1),
-        .operador2(ALU_operand2),
-        .selector(ALUSel),
-        .resultado(ALU_result),
+        .op1(Read_data1),
+        .op2(ALU_operand2),
+        .sel(ALUSel),
+        .res(ALU_result),
         .ZF(ZF)
     );
 
