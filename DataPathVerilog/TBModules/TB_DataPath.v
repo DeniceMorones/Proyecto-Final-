@@ -2,6 +2,8 @@
 
 module TB_DataPath();
     reg clk;
+    integer file, r, i;
+    reg [31:0] temp_data;
 
     // Instanciación del módulo DataPath
     DataPath DUT(.clk(clk));
@@ -12,12 +14,23 @@ module TB_DataPath();
     end
 
     initial begin
+
         // Cargar datos en la memoria de registros
-        $readmemb("DataTB.txt", DUT.RB.MEM);
+        file = $fopen("data.txt", "r");
+        if (file == 0) begin
+            $display("Error: no se pudo abrir el archivo DataTB.txt");
+            $finish;
+        end
+
+        i = 0;
+        while (!$feof(file)) begin
+            r = $fscanf(file, "%b\n", temp_data);
+            DUT.RB.MEM[i] = temp_data;
+            i = i + 1;
+        end
+        $fclose(file);
         
         // Cargar instrucciones en la memoria de instrucciones
         $readmemb("instructions.txt", DUT.instructionMem.memory);
-
-        $finish;
     end
 endmodule

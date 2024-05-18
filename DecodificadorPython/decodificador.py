@@ -6,9 +6,9 @@ def openFile():
     global path
     path = filedialog.askopenfilename(initialdir = "./",
                                       title = "Selecciona un archivo",
-                                      filetypes = [("Archivos de ensamblador", "*.asm*"),
-                                                       ("Archivos de texto", "*.txt*"),
-                                                       ("Todos los archivos", "*.*")])
+                                      filetypes = [("Todos los archivos", "*.*"),
+                                                   ("Archivos de ensamblador", "*.asm*"),
+                                                   ("Archivos de texto", "*.txt*")])
       
     label_file_explorer.configure(text="Archivo elegido: " + path)
 
@@ -57,8 +57,11 @@ def registerToBinary(register):
         register = register[1:]
     return format(int(register), '05b')
 
-def inmediateToBinary(immediate, bits):
-    return format(int(immediate), f'0{bits}b')
+def immediateToBinary(immediate, bits):
+    value = int(immediate)
+    if value < 0:
+        value = (1 << bits) + value  # Convertir a complemento a dos
+    return format(value, f'0{bits}b')
 
 def instructionToBinary(instruction):
     parts = instruction.split()
@@ -77,23 +80,23 @@ def instructionToBinary(instruction):
     elif opcode == 'nop':
         return '00000000000000000000000000000000'
     elif opcode == 'addi':
-        return f'001000{registerToBinary(parts[2])}{registerToBinary(parts[1])}{inmediateToBinary(parts[3], 16)}'
+        return f'001000{registerToBinary(parts[2])}{registerToBinary(parts[1])}{immediateToBinary(parts[3], 16)}'
     elif opcode == 'ori':
-        return f'001101{registerToBinary(parts[2])}{registerToBinary(parts[1])}{inmediateToBinary(parts[3], 16)}'
+        return f'001101{registerToBinary(parts[2])}{registerToBinary(parts[1])}{immediateToBinary(parts[3], 16)}'
     elif opcode == 'andi':
-        return f'001100{registerToBinary(parts[2])}{registerToBinary(parts[1])}{inmediateToBinary(parts[3], 16)}'
+        return f'001100{registerToBinary(parts[2])}{registerToBinary(parts[1])}{immediateToBinary(parts[3], 16)}'
     elif opcode == 'slti':
-        return f'001010{registerToBinary(parts[2])}{registerToBinary(parts[1])}{inmediateToBinary(parts[3], 16)}'
+        return f'001010{registerToBinary(parts[2])}{registerToBinary(parts[1])}{immediateToBinary(parts[3], 16)}'
     elif opcode == 'lw':
         offset, register = parts[2].strip(')').split('(')
-        return f'100011{registerToBinary(register)}{registerToBinary(parts[1])}{inmediateToBinary(offset, 16)}'
+        return f'100011{registerToBinary(register)}{registerToBinary(parts[1])}{immediateToBinary(offset, 16)}'
     elif opcode == 'sw':
         offset, register = parts[2].strip(')').split('(')
-        return f'101011{registerToBinary(register)}{registerToBinary(parts[1])}{inmediateToBinary(offset, 16)}'
+        return f'101011{registerToBinary(register)}{registerToBinary(parts[1])}{immediateToBinary(offset, 16)}'
     elif opcode == 'beq':
-        return f'000100{registerToBinary(parts[1])}{registerToBinary(parts[2])}{inmediateToBinary(parts[3], 16)}'
+        return f'000100{registerToBinary(parts[1])}{registerToBinary(parts[2])}{immediateToBinary(parts[3], 16)}'
     elif opcode == 'j':
-        return f'000010{inmediateToBinary(parts[1], 26)}'
+        return f'000010{immediateToBinary(parts[1], 26)}'
     else:
         return '00000000000000000000000000000000'
 
@@ -102,8 +105,8 @@ def decodeInstructions():
     biInstructionsDivided = ""
     asmInstructions = ""
     try:
-        with open(path, 'r') as archivo: #funcion para leer el archivo
-            lines = archivo.readlines()
+        with open(path, 'r') as file: #funcion para leer el archivo
+            lines = file.readlines()
     except FileNotFoundError:
         print("El archivo especificado no se encontró." + path) #excepcion en caso de no encontrar el archivo
     
@@ -122,6 +125,29 @@ def decodeInstructions():
 
     except FileNotFoundError:
         print("El archivo especificado a escribir no se encontró.") #excepcion en caso de no encontrar el archivo
+
+def convertToBinary():
+    biNumbers = ""
+    numbers = ""
+    try:
+        with open(path, 'r') as file: #funcion para leer el archivo
+            lines = file.readlines()
+    except FileNotFoundError:
+        print("El archivo especificado no se encontró." + path) #excepcion en caso de no encontrar el archivo
+    
+    try:
+        with open('../DataPathVerilog/data.txt', 'w') as dataTXT:#funcion para escribir y ordenar el codigo binario que va al txt
+            for line in lines:
+                numbers = numbers + line
+                binaryNumber = immediateToBinary(line, 32)
+                biNumbers = biNumbers + binaryNumber + '\n'
+            dataTXT.write(biNumbers)
+            assembly_instructions.set(numbers)
+            binary_instructions.set(biNumbers)
+
+    except FileNotFoundError:
+        print("El archivo especificado a escribir no se encontró.") #excepcion en caso de no encontrar el archivo
+
 
 window = Tk()
 window.title('Decodificador')
@@ -153,14 +179,19 @@ label_file_explorer.grid(column=0, row=0, columnspan=3, sticky='w')
 editor = Text(window, wrap=WORD)
 editor.grid(column=0, row=1, sticky="nsew", padx=10, pady=10)
 
-button_R = Button(window,
+button_inst = Button(window,
                   text="Traducir instrucciones a MIPS",
                   command=decodeInstructions)
-button_R.grid(column=0, row=2, columnspan=3, sticky='ew')
+button_inst.grid(column=0, row=2, columnspan=3, sticky='ew')
+
+button_bi = Button(window,
+                  text="Convertir numeros a binario",
+                  command=convertToBinary)
+button_bi.grid(column=0, row=3, columnspan=3, sticky='ew')
 
 
 instructions_frame = Frame(window, background="white")
-instructions_frame.grid(column=0, row=3, columnspan=3, sticky='ew')
+instructions_frame.grid(column=0, row=4, columnspan=3, sticky='ew')
 instructions_frame.grid_columnconfigure(0, weight=1)
 instructions_frame.grid_columnconfigure(1, weight=1)
 

@@ -10,13 +10,12 @@ module RegisterBank(
 
 reg [31:0] MEM [0:31];
 
-always @(*)
-	begin
+always @(*) begin
 		if(RegWrite) begin
 			MEM[Dir]=Di;
 		end
 		DR1=MEM[RA1];
 		DR2=MEM[RA2];
-	end
+end
 
 endmodule
