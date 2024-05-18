@@ -52,32 +52,55 @@ def saveFileAs():
         except Exception as e:
             messagebox.showerror("Error", f"No se pudo guardar el archivo: {e}")
 
-def toBinary(reg):
-    return f"{int(reg.replace('$', '')):05b}"#Convierte un registro en su representante binario.
+def registerToBinary(register):
+    if register.startswith('$'):
+        register = register[1:]
+    return format(int(register), '05b')
 
-def instruccionesTipoR():
+def inmediateToBinary(immediate, bits):
+    return format(int(immediate), f'0{bits}b')
+
+def instructionToBinary(instruction):
+    parts = instruction.split()
+    opcode = parts[0]
+
+    if opcode == 'add':
+        return f'000000{registerToBinary(parts[2])}{registerToBinary(parts[3])}{registerToBinary(parts[1])}00000100000'
+    elif opcode == 'sub':
+        return f'000000{registerToBinary(parts[2])}{registerToBinary(parts[3])}{registerToBinary(parts[1])}00000100010'
+    elif opcode == 'or':
+        return f'000000{registerToBinary(parts[2])}{registerToBinary(parts[3])}{registerToBinary(parts[1])}00000100101'
+    elif opcode == 'and':
+        return f'000000{registerToBinary(parts[2])}{registerToBinary(parts[3])}{registerToBinary(parts[1])}00000100100'
+    elif opcode == 'slt':
+        return f'000000{registerToBinary(parts[2])}{registerToBinary(parts[3])}{registerToBinary(parts[1])}00000101010'
+    elif opcode == 'nop':
+        return '00000000000000000000000000000000'
+    elif opcode == 'addi':
+        return f'001000{registerToBinary(parts[2])}{registerToBinary(parts[1])}{inmediateToBinary(parts[3], 16)}'
+    elif opcode == 'ori':
+        return f'001101{registerToBinary(parts[2])}{registerToBinary(parts[1])}{inmediateToBinary(parts[3], 16)}'
+    elif opcode == 'andi':
+        return f'001100{registerToBinary(parts[2])}{registerToBinary(parts[1])}{inmediateToBinary(parts[3], 16)}'
+    elif opcode == 'slti':
+        return f'001010{registerToBinary(parts[2])}{registerToBinary(parts[1])}{inmediateToBinary(parts[3], 16)}'
+    elif opcode == 'lw':
+        offset, register = parts[2].strip(')').split('(')
+        return f'100011{registerToBinary(register)}{registerToBinary(parts[1])}{inmediateToBinary(offset, 16)}'
+    elif opcode == 'sw':
+        offset, register = parts[2].strip(')').split('(')
+        return f'101011{registerToBinary(register)}{registerToBinary(parts[1])}{inmediateToBinary(offset, 16)}'
+    elif opcode == 'beq':
+        return f'000100{registerToBinary(parts[1])}{registerToBinary(parts[2])}{inmediateToBinary(parts[3], 16)}'
+    elif opcode == 'j':
+        return f'000010{inmediateToBinary(parts[1], 26)}'
+    else:
+        return 'Unknown instruction'
+
+def decodeInstructions():
     biInstructions = ""
     biInstructionsDivided = ""
     asmInstructions = ""
-    shamt = ""
-    funct = {
-        'add': '100000',
-        'sub': '100010',
-        'and': '100100',
-        'or': '100101',
-        'slt': '101010',
-        'nop': '000000',
-        'addi': '001000',
-        'ori': '001101',
-        'andi': '001100',
-        'slti': '001010',
-        'lw': '100011',
-        'sw': '101011',
-        'beq': '000100',
-        'j': '000010'
-    } #diccionario de las funciones 
-    opcode = '000000'  # opcode es siempre 000000 para instrucciones tipo R
-
     try:
         with open(path, 'r') as archivo: #funcion para leer el archivo
             lines = archivo.readlines()
@@ -88,29 +111,11 @@ def instruccionesTipoR():
         with open('../DataPathVerilog/instructions.txt', 'w') as instrucciones:#funcion para escribir y ordenar el codigo binario que va al txt
             for line in lines:
                 asmInstructions = asmInstructions + line
-                parts = line.split()
-                if len(parts) != 4:
-                    if len(parts) == 1:
-                        if(parts[0] == 'nop'):
-                            biInstructions = biInstructions + '00000000000000000000000000000000' + '\n'
-                            for i in range(4): biInstructionsDivided = biInstructionsDivided + '00000000' + '\n'
-                    continue
-                instruccion, rd, rs, rt = parts
-                if instruccion in funct:
-                    rs = toBinary(rs)
-                    rt = toBinary(rt)
-                    rd = toBinary(rd)
-                    if(instruccion == 'div'):
-                        shamt = '00010'
-                    else:
-                        shamt = '00000'
-                    funcion = funct[instruccion]
-                    binaryInstruction = f"{opcode}{rs}{rt}{rd}{shamt}{funcion}"
-                    splitInstruction = [binaryInstruction[i:i+8] for i in range(0, len(binaryInstruction), 8)]
-                    print(splitInstruction)
-                    biInstructions = biInstructions + binaryInstruction + '\n'
-                    for str in splitInstruction:
-                        biInstructionsDivided = biInstructionsDivided + str + '\n'
+                binaryInstruction = instructionToBinary(line)
+                splitInstruction = [binaryInstruction[i:i+8] for i in range(0, len(binaryInstruction), 8)]
+                biInstructions = biInstructions + binaryInstruction + '\n'
+                for str in splitInstruction:
+                    biInstructionsDivided = biInstructionsDivided + str + '\n'
             instrucciones.write(biInstructionsDivided)
             assemblyInstructions.set(asmInstructions)
             binaryInstructions.set(biInstructions)
@@ -150,7 +155,7 @@ editor.grid(column=0, row=1, sticky="nsew", padx=10, pady=10)
 
 button_R = Button(window,
                   text="Traducir instrucciones a MIPS",
-                  command=instruccionesTipoR)
+                  command=decodeInstructions)
 button_R.grid(column=0, row=2, columnspan=3, sticky='ew')
 
 
