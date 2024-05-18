@@ -135,13 +135,13 @@ binary_instructions.set("")
 assembly_instructions = StringVar()
 assembly_instructions.set("")
 
-archivo_menu = Menu(menu_bar, tearoff=0)
-menu_bar.add_cascade(label="Archivo", menu=archivo_menu)
-archivo_menu.add_command(label="Abrir", command=openFile)
-archivo_menu.add_command(label="Guardar", command=saveFile)
-archivo_menu.add_command(label="Guardar como", command=saveFileAs)
-archivo_menu.add_separator()
-archivo_menu.add_command(label="Salir", command=exit) #command=window.quit
+file_menu = Menu(menu_bar, tearoff=0)
+menu_bar.add_cascade(label="Archivo", menu=file_menu)
+file_menu.add_command(label="Abrir", command=openFile)
+file_menu.add_command(label="Guardar", command=saveFile)
+file_menu.add_command(label="Guardar como", command=saveFileAs)
+file_menu.add_separator()
+file_menu.add_command(label="Salir", command=exit) #command=window.quit
 
 label_file_explorer = Label(window,
                             text="Archivo elegido:",
