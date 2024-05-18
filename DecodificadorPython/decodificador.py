@@ -5,8 +5,8 @@ from tkinter import filedialog
 def openFile():
     global path
     path = filedialog.askopenfilename(initialdir = "./",
-                                          title = "Selecciona un archivo",
-                                          filetypes = [("Archivos de ensamblador", "*.asm*"),
+                                      title = "Selecciona un archivo",
+                                      filetypes = [("Archivos de ensamblador", "*.asm*"),
                                                        ("Archivos de texto", "*.txt*"),
                                                        ("Todos los archivos", "*.*")])
       
@@ -95,7 +95,7 @@ def instructionToBinary(instruction):
     elif opcode == 'j':
         return f'000010{inmediateToBinary(parts[1], 26)}'
     else:
-        return 'Unknown instruction'
+        return '00000000000000000000000000000000'
 
 def decodeInstructions():
     biInstructions = ""
@@ -108,7 +108,7 @@ def decodeInstructions():
         print("El archivo especificado no se encontró." + path) #excepcion en caso de no encontrar el archivo
     
     try:
-        with open('../DataPathVerilog/instructions.txt', 'w') as instrucciones:#funcion para escribir y ordenar el codigo binario que va al txt
+        with open('../DataPathVerilog/instructions.txt', 'w') as instructionsTXT:#funcion para escribir y ordenar el codigo binario que va al txt
             for line in lines:
                 asmInstructions = asmInstructions + line
                 binaryInstruction = instructionToBinary(line)
@@ -116,9 +116,9 @@ def decodeInstructions():
                 biInstructions = biInstructions + binaryInstruction + '\n'
                 for str in splitInstruction:
                     biInstructionsDivided = biInstructionsDivided + str + '\n'
-            instrucciones.write(biInstructionsDivided)
-            assemblyInstructions.set(asmInstructions)
-            binaryInstructions.set(biInstructions)
+            instructionsTXT.write(biInstructionsDivided)
+            assembly_instructions.set(asmInstructions)
+            binary_instructions.set(biInstructions)
 
     except FileNotFoundError:
         print("El archivo especificado a escribir no se encontró.") #excepcion en caso de no encontrar el archivo
@@ -130,10 +130,10 @@ window.config(background="white")
 menu_bar = Menu(window)
 window.config(menu=menu_bar)
 
-binaryInstructions = StringVar()
-binaryInstructions.set("")
-assemblyInstructions = StringVar()
-assemblyInstructions.set("")
+binary_instructions = StringVar()
+binary_instructions.set("")
+assembly_instructions = StringVar()
+assembly_instructions.set("")
 
 archivo_menu = Menu(menu_bar, tearoff=0)
 menu_bar.add_cascade(label="Archivo", menu=archivo_menu)
@@ -165,7 +165,7 @@ instructions_frame.grid_columnconfigure(0, weight=1)
 instructions_frame.grid_columnconfigure(1, weight=1)
 
 label_assembly_instructions = Label(instructions_frame,
-                                    textvariable=assemblyInstructions,
+                                    textvariable=assembly_instructions,
                                     width=50, height=15,
                                     fg="blue",
                                     background="white",
@@ -173,7 +173,7 @@ label_assembly_instructions = Label(instructions_frame,
 label_assembly_instructions.grid(column=0, row=0, sticky='nw', padx=(200, 0), pady=(10, 10))
 
 label_binary_instructions = Label(instructions_frame,
-                                  textvariable=binaryInstructions,
+                                  textvariable=binary_instructions,
                                   width=55, height=15,
                                   fg="blue",
                                   background="white",
