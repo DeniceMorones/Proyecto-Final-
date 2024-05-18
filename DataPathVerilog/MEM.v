@@ -6,7 +6,7 @@ module Mem(
 	output reg [31:0] Dout
 );
 //2. Definir Elementos /Componentes Internos (Cables, Registros).
-reg [31:0] A [0:256];
+reg [31:0] A [0:255];
 
 //3. Elementos de Procesamiento (Lógicos y aritméticos)
 

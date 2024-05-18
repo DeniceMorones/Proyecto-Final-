@@ -1,5 +1,5 @@
 module InstructionMemory (
- input wire [7:0] address,
+ input wire [31:0] address,
  output reg [31:0] instruction
 );
 

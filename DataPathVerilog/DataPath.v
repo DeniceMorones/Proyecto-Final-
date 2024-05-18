@@ -1,7 +1,8 @@
 `timescale 1ns/1ns
 
-module DataPath();
-    reg clk;
+module DataPath(
+    input wire clk
+);
 
     wire RegDst;
     wire Jump;
@@ -73,9 +74,9 @@ module DataPath();
         .outOp(PC_next)
     );
 
-    InstructionMemory inst_memory(
-        .direccion(PC_out),
-        .instruccion(Instruction)
+    InstructionMemory instructionMem(
+        .address(PC_out),
+        .instruction(Instruction)
     );
 
     ControlUnit UDC(
@@ -152,10 +153,5 @@ module DataPath();
         .Op2(Mem_data),
         .outOp(Write_data)
     );
-
-    initial begin
-        clk = 1'b0;
-        forever #100 clk = ~clk;
-    end
 
 endmodule

@@ -1,4 +1,4 @@
-module ShiftLeft2(
+module ShiftLeft2_26_28(
     input [25:0] in,
     output [27:0] out
 );
