@@ -14,9 +14,12 @@ module TB_DataPath();
     end
 
     initial begin
+        
+        // Cargar datos en el banco de registros
+        $readmemb("registerBankData.txt", DUT.RB.MEM);
 
-        // Cargar datos en la memoria de registros
-        file = $fopen("data.txt", "r");
+        /*
+        file = $fopen("registerBankData.txt", "r");
         if (file == 0) begin
             $display("Error: no se pudo abrir el archivo DataTB.txt");
             $finish;
@@ -29,6 +32,10 @@ module TB_DataPath();
             i = i + 1;
         end
         $fclose(file);
+        */
+
+        // Cargar datos en la memoria
+        $readmemb("memoryData.txt", DUT.DataMem.MEM);
         
         // Cargar instrucciones en la memoria de instrucciones
         $readmemb("instructions.txt", DUT.instructionMem.memory);

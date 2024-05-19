@@ -126,7 +126,7 @@ def decodeInstructions():
     except FileNotFoundError:
         print("El archivo especificado a escribir no se encontró.") #excepcion en caso de no encontrar el archivo
 
-def convertToBinary():
+def dataToBinary(fileName):
     biNumbers = ""
     numbers = ""
     try:
@@ -136,7 +136,7 @@ def convertToBinary():
         print("El archivo especificado no se encontró." + path) #excepcion en caso de no encontrar el archivo
     
     try:
-        with open('../DataPathVerilog/data.txt', 'w') as dataTXT:#funcion para escribir y ordenar el codigo binario que va al txt
+        with open('../DataPathVerilog/' + fileName, 'w') as dataTXT:#funcion para escribir y ordenar el codigo binario que va al txt
             for line in lines:
                 numbers = numbers + line
                 binaryNumber = immediateToBinary(line, 32)
@@ -179,19 +179,27 @@ label_file_explorer.grid(column=0, row=0, columnspan=3, sticky='w')
 editor = Text(window, wrap=WORD)
 editor.grid(column=0, row=1, sticky="nsew", padx=10, pady=10)
 
-button_inst = Button(window,
-                  text="Traducir instrucciones a MIPS",
-                  command=decodeInstructions)
-button_inst.grid(column=0, row=2, columnspan=3, sticky='ew')
+buttons_frame = Frame(window, background="white")
+buttons_frame.grid(column=0, row=2, columnspan=3, sticky='ew')
+buttons_frame.grid_columnconfigure(0, weight=1)
 
-button_bi = Button(window,
-                  text="Convertir numeros a binario",
-                  command=convertToBinary)
-button_bi.grid(column=0, row=3, columnspan=3, sticky='ew')
+button_inst = Button(buttons_frame,
+                     text="Traducir instrucciones a MIPS",
+                     command=decodeInstructions)
+button_inst.grid(column=0, row=0, pady=0, sticky='ew')
 
+button_register_bank = Button(buttons_frame,
+                   text="Crear archivo para banco de registros",
+                   command=lambda: dataToBinary('registerBankData.txt'))
+button_register_bank.grid(column=0, row=1, pady=0, sticky='ew')
+
+button_memory = Button(buttons_frame,
+                   text="Crear archivo para memoria",
+                   command=lambda: dataToBinary('memoryData.txt'))
+button_memory.grid(column=0, row=2, pady=0, sticky='ew')
 
 instructions_frame = Frame(window, background="white")
-instructions_frame.grid(column=0, row=4, columnspan=3, sticky='ew')
+instructions_frame.grid(column=0, row=3, columnspan=3, sticky='ew')
 instructions_frame.grid_columnconfigure(0, weight=1)
 instructions_frame.grid_columnconfigure(1, weight=1)
 

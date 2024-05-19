@@ -1,0 +1,268 @@
+# Compile of ADD.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUControl.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of InstructionMem.v was successful.
+# Compile of MEM.v was successful.
+# Compile of Mux2_1_5.v was successful.
+# Compile of Mux2_1_8.v was successful.
+# Compile of Mux2_1_32.v was successful.
+# Compile of PC.v was successful.
+# Compile of RegisterBank.v was successful.
+# Compile of ShiftLeft2_ 26_28.v was successful.
+# Compile of ShiftLeft2_32.v was successful.
+# Compile of SignExtend.v was successful.
+# Compile of TB_ADD.v was successful.
+# Compile of TB_ALU.v was successful.
+# Compile of TB_ALU_CONTROL.v was successful.
+# Compile of TB_ControlUnit.v was successful.
+# Compile of TB_DataPath.v was successful.
+# Compile of TB_InstructionMem.v was successful.
+# Compile of TB_Mux2_1_32.v was successful.
+# Compile of TB_PC.v was successful.
+# Compile of TB_ShiftLeft.v was successful.
+# Compile of TB_SignExtend.v was successful.
+vsim work.TB_DataPath
+# vsim work.TB_DataPath 
+# Start time: 18:23:40 on May 18,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Mem
+add wave -position end sim:/TB_DataPath/DUT/counter/*
+add wave -position end sim:/TB_DataPath/DUT/instructionMem/*
+add wave -position end sim:/TB_DataPath/DUT/RB/*
+add wave -position end sim:/TB_DataPath/DUT/Alu/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of ADD.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUControl.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of InstructionMem.v was successful.
+# Compile of Memory.v failed with 1 errors.
+# Compile of Mux2_1_5.v was successful.
+# Compile of Mux2_1_8.v was successful.
+# Compile of Mux2_1_32.v was successful.
+# Compile of PC.v was successful.
+# Compile of RegisterBank.v was successful.
+# Compile of ShiftLeft2_ 26_28.v was successful.
+# Compile of ShiftLeft2_32.v was successful.
+# Compile of SignExtend.v was successful.
+# Compile of TB_ADD.v was successful.
+# Compile of TB_ALU.v was successful.
+# Compile of TB_ALU_CONTROL.v was successful.
+# Compile of TB_ControlUnit.v was successful.
+# Compile of TB_DataPath.v was successful.
+# Compile of TB_InstructionMem.v was successful.
+# Compile of TB_Mux2_1_32.v was successful.
+# Compile of TB_PC.v was successful.
+# Compile of TB_ShiftLeft.v was successful.
+# Compile of TB_SignExtend.v was successful.
+run
+# Compile of Memory.v was successful.
+vsim work.TB_DataPath
+# End time: 18:54:56 on May 18,2024, Elapsed time: 0:31:16
+# Errors: 0, Warnings: 60
+# vsim work.TB_DataPath 
+# Start time: 18:54:56 on May 18,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Mem
+add wave -position end sim:/TB_DataPath/DUT/counter/*
+add wave -position end sim:/TB_DataPath/DUT/instructionMem/*
+add wave -position end sim:/TB_DataPath/DUT/RB/*
+add wave -position end sim:/TB_DataPath/DUT/Alu/*
+add wave -position end sim:/TB_DataPath/DUT/DataMem/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 18:56:19 on May 18,2024, Elapsed time: 0:01:23
+# Errors: 0, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 18:56:19 on May 18,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Mem
+add wave -position end sim:/TB_DataPath/DUT/counter/*
+add wave -position end sim:/TB_DataPath/DUT/instructionMem/*
+add wave -position end sim:/TB_DataPath/DUT/RB/*
+add wave -position end sim:/TB_DataPath/DUT/Alu/*
+add wave -position end sim:/TB_DataPath/DUT/DataMem/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 18:58:59 on May 18,2024, Elapsed time: 0:02:40
+# Errors: 0, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 18:58:59 on May 18,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Mem
+add wave -position end sim:/TB_DataPath/DUT/counter/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
