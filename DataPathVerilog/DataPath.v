@@ -81,6 +81,7 @@ module DataPath(
 
     ControlUnit UDC(
         .opcode(Instruction[31:26]),
+        .funct(Instruction[5:0]),
         .RegDst(RegDst),
         .Jump(Jump),
         .Branch(Branch),

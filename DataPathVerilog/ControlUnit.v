@@ -1,5 +1,6 @@
 module ControlUnit(
  input [5:0] opcode,
+ input [5:0] funct,
  output reg RegDst,
  output reg Jump,
  output reg Branch,
@@ -23,10 +24,13 @@ module ControlUnit(
      RegWrite = 0;
      case (opcode)
          6'b000000: begin // tipo R
-             RegDst = 1;
-             RegWrite = 1;
-             ALUOp = 3'b010;
-         end
+            if (funct == 6'b000000) begin // nop
+            end else begin
+                RegDst = 1;
+                RegWrite = 1;
+                ALUOp = 3'b010;
+            end
+        end
          6'b001000: begin // addi
              ALUSrc = 1;
              RegWrite = 1;
