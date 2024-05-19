@@ -1,3 +1,4 @@
+nop
 main:
 lw $0 0($15)        # Cargar el número en $t0 (n)
 lw $1 2($15)        # Cargar la constante 1 en $t1

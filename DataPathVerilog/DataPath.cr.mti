@@ -1,0 +1,158 @@
+{C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/SignExtend.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/SignExtend.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SignExtend
+
+Top level modules:
+	SignExtend
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/ControlUnit.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/ControlUnit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ControlUnit
+
+Top level modules:
+	ControlUnit
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/ALU.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/ALU.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_Mux2_1_32.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_Mux2_1_32.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_Mux2_1_32
+
+Top level modules:
+	TB_Mux2_1_32
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/ALUControl.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/ALUControl.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ALUControl
+
+Top level modules:
+	ALUControl
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/PC.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/PC.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module PC
+
+Top level modules:
+	PC
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_SignExtend.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_SignExtend.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_ShiftLeft.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_ShiftLeft.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_ShiftLeft
+
+Top level modules:
+	TB_ShiftLeft
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_ADD.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_ADD.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_ADD
+
+Top level modules:
+	TB_ADD
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_ALU_CONTROL.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_ALU_CONTROL.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_ALUControl
+
+Top level modules:
+	TB_ALUControl
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_PC.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_PC.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_PC
+
+Top level modules:
+	TB_PC
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/ShiftLeft2_32.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/ShiftLeft2_32.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ShiftLeft2_32
+
+Top level modules:
+	ShiftLeft2_32
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/Mux2_1_5.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/Mux2_1_5.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mux2_1_5
+
+Top level modules:
+	Mux2_1_5
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/Mux2_1_32.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/Mux2_1_32.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mux2_1_32
+
+Top level modules:
+	Mux2_1_32
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/ADD.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/ADD.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ADD
+
+Top level modules:
+	ADD
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/InstructionMem.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/InstructionMem.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module InstructionMemory
+
+Top level modules:
+	InstructionMemory
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/RegisterBank.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/RegisterBank.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RegisterBank
+
+Top level modules:
+	RegisterBank
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_DataPath.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_DataPath.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_DataPath
+
+Top level modules:
+	TB_DataPath
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/ShiftLeft2_ 26_28.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/ShiftLeft2_ 26_28.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ShiftLeft2_26_28
+
+Top level modules:
+	ShiftLeft2_26_28
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/Mux2_1_8.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/Mux2_1_8.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module Mux2_1_8
+
+Top level modules:
+	Mux2_1_8
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_InstructionMem.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_InstructionMem.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_InstructionMem
+
+Top level modules:
+	TB_InstructionMem
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_ControlUnit.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_ControlUnit.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_ControlUnit
+
+Top level modules:
+	TB_ControlUnit
+
+} {} {}} {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_ALU.v} {1 {vlog -work work -stats=none {C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_ALU.v}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module TB_ALU
+
+Top level modules:
+	TB_ALU
+
+} {} {}}

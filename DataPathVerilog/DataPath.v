@@ -140,7 +140,7 @@ module DataPath(
         .ZF(ZF)
     );
 
-    Mem DataMem(
+    Memory DataMem(
         .Ewr(MemWrite),
         .Dir(ALU_result),
         .Din(Read_data2),
