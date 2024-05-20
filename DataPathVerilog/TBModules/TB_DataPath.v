@@ -16,7 +16,7 @@ module TB_DataPath();
     initial begin
         
         // Cargar datos en el banco de registros
-        $readmemb("registerBankData.txt", DUT.RB.MEM);
+        $readmemb("registerBankData.txt", DUT.registerBank.MEM);
 
         /*
         file = $fopen("registerBankData.txt", "r");

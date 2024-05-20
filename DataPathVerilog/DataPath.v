@@ -100,7 +100,8 @@ module DataPath(
         .outOp(Mux2_Out)
     );
 
-    RegisterBank RB(
+    RegisterBank registerBank(
+        .clk(clk),
         .RA1(Instruction[25:21]),
         .RA2(Instruction[20:16]),
         .Dir(Mux2_Out),

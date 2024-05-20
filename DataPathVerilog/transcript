@@ -1,0 +1,1592 @@
+# Compile of ADD.v was successful.
+# Compile of ALU.v was successful.
+# Compile of ALUControl.v was successful.
+# Compile of ControlUnit.v was successful.
+# Compile of DataPath.v was successful.
+# Compile of InstructionMem.v was successful.
+# Compile of Memory.v was successful.
+# Compile of Mux2_1_5.v was successful.
+# Compile of Mux2_1_8.v was successful.
+# Compile of Mux2_1_32.v was successful.
+# Compile of PC.v was successful.
+# Compile of RegisterBank.v was successful.
+# Compile of ShiftLeft2_ 26_28.v was successful.
+# Compile of ShiftLeft2_32.v was successful.
+# Compile of SignExtend.v was successful.
+# Compile of TB_ADD.v was successful.
+# Compile of TB_ALU.v was successful.
+# Compile of TB_ALU_CONTROL.v was successful.
+# Compile of TB_ControlUnit.v was successful.
+# Compile of TB_DataPath.v was successful.
+# Compile of TB_InstructionMem.v was successful.
+# Compile of TB_Memory.v was successful.
+# Compile of TB_Mux2_1_32.v was successful.
+# Compile of TB_PC.v was successful.
+# Compile of TB_ShiftLeft.v was successful.
+# Compile of TB_SignExtend.v was successful.
+vsim work.TB_DataPath
+# vsim work.TB_DataPath 
+# Start time: 18:29:42 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 18:31:24 on May 19,2024, Elapsed time: 0:01:42
+# Errors: 0, Warnings: 31
+# vsim work.TB_DataPath 
+# Start time: 18:31:24 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+add wave -position end sim:/TB_DataPath/DUT/Alu/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 18:32:29 on May 19,2024, Elapsed time: 0:01:05
+# Errors: 0, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 18:32:29 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+add wave -position end sim:/TB_DataPath/DUT/counter/*
+add wave -position end sim:/TB_DataPath/DUT/instructionMem/*
+add wave -position end sim:/TB_DataPath/DUT/RB/*
+add wave -position end sim:/TB_DataPath/DUT/Alu/*
+add wave -position end sim:/TB_DataPath/DUT/DataMem/*
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 18:40:20 on May 19,2024, Elapsed time: 0:07:51
+# Errors: 0, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 18:40:20 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 18:41:18 on May 19,2024, Elapsed time: 0:00:58
+# Errors: 0, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 18:41:18 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+add wave -position end sim:/TB_DataPath/DUT/counter/*
+add wave -position end sim:/TB_DataPath/DUT/instructionMem/*
+add wave -position end sim:/TB_DataPath/DUT/RB/*
+add wave -position end sim:/TB_DataPath/DUT/Alu/*
+add wave -position end sim:/TB_DataPath/DUT/DataMem/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 18:59:27 on May 19,2024, Elapsed time: 0:18:09
+# Errors: 0, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 18:59:27 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 1100 ns ###############
+#   Active process: /TB_DataPath/DUT/Alu/#ASSIGN#35 @ sub-iteration 0
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:136
+#   Active process: /TB_DataPath/DUT/RB/#IMPLICIT-WIRE(DR1)#103 @ sub-iteration 0
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:103
+#   Active process: /TB_DataPath/DUT/Alu/#ASSIGN#35 @ sub-iteration 1
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:136
+#   Active process: /TB_DataPath/DUT/RB/#IMPLICIT-WIRE(DR1)#103 @ sub-iteration 1
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:103
+#   Active process: /TB_DataPath/DUT/Alu/#ASSIGN#35 @ sub-iteration 2
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:136
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1100 ns.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1100 ns.
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 19:00:37 on May 19,2024, Elapsed time: 0:01:10
+# Errors: 2, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 19:00:37 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+run
+vsim work.TB_DataPath
+# End time: 19:01:18 on May 19,2024, Elapsed time: 0:00:41
+# Errors: 0, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 19:01:18 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 1300 ns ###############
+#   Active process: /TB_DataPath/DUT/Alu/#ASSIGN#35 @ sub-iteration 0
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:136
+#   Active process: /TB_DataPath/DUT/RB/#IMPLICIT-WIRE(DR1)#103 @ sub-iteration 0
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:103
+#   Active process: /TB_DataPath/DUT/Alu/#ASSIGN#35 @ sub-iteration 1
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:136
+#   Active process: /TB_DataPath/DUT/RB/#IMPLICIT-WIRE(DR1)#103 @ sub-iteration 1
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:103
+#   Active process: /TB_DataPath/DUT/Alu/#ASSIGN#35 @ sub-iteration 2
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:136
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 1300 ns.
+vsim work.TB_DataPath
+# End time: 19:12:06 on May 19,2024, Elapsed time: 0:10:48
+# Errors: 1, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 19:12:06 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 19:13:24 on May 19,2024, Elapsed time: 0:01:18
+# Errors: 0, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 19:13:24 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+add wave -position end sim:/TB_DataPath/DUT/Alu/*
+add wave -position 0 sim:/TB_DataPath/DUT/counter/*
+add wave -position end sim:/TB_DataPath/DUT/RB/*
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 19:16:44 on May 19,2024, Elapsed time: 0:03:20
+# Errors: 0, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 19:16:44 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+add wave -position end sim:/TB_DataPath/DUT/counter/*
+add wave -position end sim:/TB_DataPath/DUT/instructionMem/*
+add wave -position end sim:/TB_DataPath/DUT/RB/*
+add wave -position end sim:/TB_DataPath/DUT/Alu/*
+add wave -position end sim:/TB_DataPath/DUT/DataMem/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 2100 ns ###############
+#   Active process: /TB_DataPath/DUT/Alu/#ASSIGN#35 @ sub-iteration 0
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:136
+#   Active process: /TB_DataPath/DUT/RB/#IMPLICIT-WIRE(DR1)#103 @ sub-iteration 0
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:103
+#   Active process: /TB_DataPath/DUT/Alu/#ASSIGN#35 @ sub-iteration 1
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:136
+#   Active process: /TB_DataPath/DUT/RB/#IMPLICIT-WIRE(DR1)#103 @ sub-iteration 1
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:103
+#   Active process: /TB_DataPath/DUT/Alu/#ASSIGN#35 @ sub-iteration 2
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:136
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 2100 ns.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 2100 ns.
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 19:20:45 on May 19,2024, Elapsed time: 0:04:01
+# Errors: 2, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 19:20:45 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+#############  Autofindloop Analysis  ###############
+#############  Loop found at time 2300 ns ###############
+#   Active process: /TB_DataPath/DUT/Alu/#ASSIGN#35 @ sub-iteration 0
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:136
+#   Active process: /TB_DataPath/DUT/RB/#IMPLICIT-WIRE(DR1)#103 @ sub-iteration 0
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:103
+#   Active process: /TB_DataPath/DUT/Alu/#ASSIGN#35 @ sub-iteration 1
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:136
+#   Active process: /TB_DataPath/DUT/RB/#IMPLICIT-WIRE(DR1)#103 @ sub-iteration 1
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:103
+#   Active process: /TB_DataPath/DUT/Alu/#ASSIGN#35 @ sub-iteration 2
+#     Source: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/DataPath.v:136
+################# END OF LOOP #################
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 2300 ns.
+run
+# ** Error (suppressible): (vsim-3601) Iteration limit 5000 reached at time 2300 ns.
+run
+vsim work.TB_DataPath
+# End time: 19:21:06 on May 19,2024, Elapsed time: 0:00:21
+# Errors: 2, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 19:21:06 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+add wave -position end sim:/TB_DataPath/DUT/counter/*
+add wave -position end sim:/TB_DataPath/DUT/instructionMem/*
+add wave -position end sim:/TB_DataPath/DUT/RB/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 19:23:19 on May 19,2024, Elapsed time: 0:02:13
+# Errors: 0, Warnings: 1
+# vsim work.TB_DataPath 
+# Start time: 19:23:19 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+add wave -position end sim:/TB_DataPath/DUT/counter/*
+add wave -position end sim:/TB_DataPath/DUT/instructionMem/*
+add wave -position end sim:/TB_DataPath/DUT/Alu/*
+add wave -position end sim:/TB_DataPath/DUT/DataMem/*
+add wave -position 5 sim:/TB_DataPath/DUT/RB/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of DataPath.v was successful.
+# Compile of RegisterBank.v was successful.
+vsim work.TB_DataPath
+# End time: 19:27:07 on May 19,2024, Elapsed time: 0:03:48
+# Errors: 0, Warnings: 3
+# vsim work.TB_DataPath 
+# Start time: 19:27:07 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+# ** Warning: (vsim-3008) [CNNODP] - Component name (RB) is not on a downward path.
+#    Time: 0 ns  Iteration: 0  Instance: /TB_DataPath File: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_DataPath.v Line: 19
+# ** Error: (vsim-3043) Unresolved reference to 'RB' in DUT.RB.
+#    Time: 0 ns  Iteration: 0  Instance: /TB_DataPath File: C:/Arquitectura de Computadoras/Proyecto-Final-/DataPathVerilog/TBModules/TB_DataPath.v Line: 19
+# Error loading design
+# End time: 19:27:07 on May 19,2024, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 2
+# Compile of TB_DataPath.v was successful.
+vsim work.TB_DataPath
+# vsim work.TB_DataPath 
+# Start time: 19:27:56 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 19:29:26 on May 19,2024, Elapsed time: 0:01:30
+# Errors: 0, Warnings: 2
+# vsim work.TB_DataPath 
+# Start time: 19:29:26 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+add wave -position end sim:/TB_DataPath/DUT/counter/*
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# Compile of TB_DataPath.v was successful.
+# Compile of TB_DataPath.v was successful.
+# Compile of TB_DataPath.v was successful.
+# Compile of TB_DataPath.v was successful.
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim work.TB_DataPath
+# End time: 19:46:00 on May 19,2024, Elapsed time: 0:16:34
+# Errors: 0, Warnings: 5
+# vsim work.TB_DataPath 
+# Start time: 19:46:00 on May 19,2024
+# Loading work.TB_DataPath
+# Loading work.DataPath
+# Loading work.PC
+# Loading work.ADD
+# Loading work.ShiftLeft2_26_28
+# Loading work.Mux2_1_32
+# Loading work.InstructionMemory
+# Loading work.ControlUnit
+# Loading work.Mux2_1_5
+# Loading work.RegisterBank
+# Loading work.SignExtend
+# Loading work.ShiftLeft2_32
+# Loading work.ALUControl
+# Loading work.ALU
+# Loading work.Memory
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 19:48:27 on May 19,2024, Elapsed time: 0:02:27
+# Errors: 0, Warnings: 1
