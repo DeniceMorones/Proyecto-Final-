@@ -37,7 +37,7 @@ En este programa podemos seleccionar cualquier archivo .asm de nuestro PC para p
 Las instrucciones de las líneas leídas se separan por partes de 8 en 8 dandonos una intruccion completa en 4 lineas, las instrucciones cambian a binario y el diccionario decodifica la función, se terminan de procesar todas las instrucciones y se almacenan en el archivo de tipo texto.
 ademas es capaz de guardar el archivo decodificado con otro nombre en especifico, y pues crear archivos para elñ banco de registros o la memoria 
 
-![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/165964044/309faf8d-63cf-4eca-b495-d6c21bbb9429)
+![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/167491829/b31cc4d2-27b9-44fb-8388-99d2eea52a00)
 
 **Archivo de las instrucciones dentro de la carpeta de "Decodificador"**
 
