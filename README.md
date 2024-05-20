@@ -39,9 +39,6 @@ ademas es capaz de guardar el archivo decodificado con otro nombre en especifico
 
 ![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/167491829/b31cc4d2-27b9-44fb-8388-99d2eea52a00)
 
-**Archivo de las instrucciones dentro de la carpeta de "Decodificador"**
-
-![Add a little bit of body text](https://github.com/DeniceMorones/Proyecto-Final-/assets/165964044/2f7e6d92-e814-432f-abab-44bfebb8e98b) 
 
 
 
