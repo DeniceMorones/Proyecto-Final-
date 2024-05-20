@@ -32,7 +32,7 @@ Comenzando con el DataPath basandonos en el siguiente diagrama:
 
 ## Decodificador 👨‍💻
 
-**Nota: Es importante que los directorios esten organizados de la misma manera que en este repositorio para el correcto funcionamiento del decodificador. Ademas debe de ser ejecutado desde la carpeta que contiene al decodificador**
+**Nota: Es importante que los directorios esten organizados de la misma manera que en este repositorio para el correcto funcionamiento del decodificador. Ademas debe de ser ejecutado desde el archivo decodificador.exe**
 
 El decodificador es un programa hecho con Python&reg; utilizando la librería **tkinter** para crear un interfaz intuitivo para el usuario.
 En este programa podemos seleccionar cualquier archivo .asm de nuestro PC para posteriormente decodificar las instrucciones tipo R,I y J  que este contenga,
