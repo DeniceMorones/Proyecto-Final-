@@ -43,23 +43,6 @@ ademas es capaz de guardar el archivo decodificado con otro nombre en especifico
 
 ![Add a little bit of body text](https://github.com/DeniceMorones/Proyecto-Final-/assets/165964044/2f7e6d92-e814-432f-abab-44bfebb8e98b) 
 
-# Fase 1.2
 
-Procesador single datapath de MIPS para la ejecucionde intrucciones tipo R, el cual utiliza un solo camino para la transferencia de datos dentro del procesador, en otras palabras que consta de una ruta única.
-
-![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/167491829/187fac50-a40b-41fe-a526-10fe7c022864)
-
-## Decodificador 👨‍💻
-
-Mejoramos el decodificador para lograr la edicion de las intrucciones asi como una busqueda en los archivos de nuestro computador ademas de las nuevas opciones guardar y guardar como, este ya logra manejar instrucciones I, R y J, además de buscar el archivo por todas las carpetas, al guardar se guarda automáticamente en el DataPath de verilog con el nombre de **Instrucciones Tipo R**. 
-
-![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/167491829/104172dd-b7c0-4cec-b830-e924eaf2506a)
-
-
-## Instrucciones ⌨️
-
-Las instruciones enviadas al archivo .txt ahora se muestran divididas en 8 bits por lo que cada 4 lineas tiene una intruccion.
-
-![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/167491829/2043bd28-364e-4ca6-ab61-c5fde7694d92)
 
 
