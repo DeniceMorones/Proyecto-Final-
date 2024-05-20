@@ -28,13 +28,14 @@ Procesador de instrucciones MIPS que decodificará mediante el lenguaje de progr
 
 Comenzando con el DataPath basandonos en el siguiente diagrama:
 
-![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/165964044/1fc0d74c-0fdf-48e3-bb35-d91b7660de6e)
+![WhatsApp Image 2024-05-20 at 1 27 45 AM](https://github.com/DeniceMorones/Proyecto-Final-/assets/167491829/95c91c5a-0e92-4a88-8ee6-e78038f5d8a5)
 
 ## Decodificador 👨‍💻
 
 El decodificador es un programa hecho con Python&reg; utilizando la librería **tkinter** para crear un interfaz intuitivo para el usuario.
-En este programa podemos seleccionar cualquier archivo .asm de nuestro PC para posteriormente decodificar las instrucciones tipo R que este contenga. Esto se hace mediante la lectura de un archivo guardando su ruta, la lectura del archivo se hace por líneas, posteriormente crea un archivo de texto instrucciones_r.txt en modo escritura para que se le permita añadir datos.
-Las instrucciones de las líneas leídas se separan por partes, las instrucciones cambian a binario y el diccionario decodifica la función, se terminan de procesar todas las instrucciones y se almacenan en el archivo de tipo texto.
+En este programa podemos seleccionar cualquier archivo .asm de nuestro PC para posteriormente decodificar las instrucciones tipo R,I y J  que este contenga. Esto se hace mediante la lectura de un archivo guardando su ruta, la lectura del archivo se hace por líneas, posteriormente crea un archivo de texto instrucciones_r.txt en modo escritura para que se le permita añadir datos.
+Las instrucciones de las líneas leídas se separan por partes de 8 en 8 dandonos una intruccion completa en 4 lineas, las instrucciones cambian a binario y el diccionario decodifica la función, se terminan de procesar todas las instrucciones y se almacenan en el archivo de tipo texto.
+ademas es capaz de guardar el archivo decodificado con otro nombre en especifico, y pues crear archivos para elñ banco de registros o la memoria 
 
 ![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/165964044/309faf8d-63cf-4eca-b495-d6c21bbb9429)
 
