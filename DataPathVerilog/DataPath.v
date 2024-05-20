@@ -142,6 +142,7 @@ module DataPath(
     );
 
     Memory DataMem(
+	.clk(clk),
         .Ewr(MemWrite),
         .Dir(ALU_result),
         .Din(Read_data2),
