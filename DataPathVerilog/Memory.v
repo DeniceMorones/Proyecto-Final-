@@ -1,4 +1,5 @@
 module Memory(
+	input clk,
 	input Ewr,
 	input [31:0] Dir,
 	input [31:0] Din,
@@ -7,12 +8,13 @@ module Memory(
 
 reg [31:0] MEM [0:255];
 
+always @(posedge clk) begin
+    if (Ewr) begin
+        MEM[Dir] <= Din;
+    end
+end
+
 always @(*) begin
-		if(Ewr) begin
-			MEM[Dir] = Din;
-		end
-		else begin
-				Dout = MEM[Dir];
-		end
-	end
+    Dout = MEM[Dir];
+end
 endmodule
