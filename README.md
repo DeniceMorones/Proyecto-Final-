@@ -54,7 +54,7 @@ Mejoramos el decodificador para lograr la edicion de las intrucciones asi como u
 
 ![image](https://github.com/DeniceMorones/Proyecto-Final-/assets/167491829/104172dd-b7c0-4cec-b830-e924eaf2506a)
 
-## instrucciones 
+## Instrucciones ⌨️
 
 Las instruciones enviadas al archivo .txt ahora se muestran divididas en 8 bits por lo que cada 4 lineas tiene una intruccion.
 
